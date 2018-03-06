@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="68" viewBox="0 0 180 68">
+    <defs>
+        <filter id="a" width="108.1%" height="123.3%" x="-4.1%" y="-8.3%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" filter="url(#a)" transform="translate(4 2)">
+        <rect width="172" height="60" fill="#000" rx="10"/>
+        <text fill="#FFF" font-family="MyriadPro-Regular, Myriad Pro" font-size="14">
+            <tspan x="43" y="19">Download on the</tspan>  <tspan x="43" y="36.8" font-family="MyriadPro-Semibold, Myriad Pro" font-size="28" font-weight="500">App Store</tspan>
+        </text>
+        <path fill="#FFF" d="M26.689 29.249c3.242 0 5.316 3.137 5.316 3.137s-3.163 1.717-3.163 5.445c0 4.424 3.974 5.711 3.974 5.711s-3.137 7.442-6.659 7.442c-1.98 0-2.112-1.139-4.744-1.139-2.286 0-3.056 1.14-4.797 1.14C13.293 50.984 9 43.73 9 37.83c0-6.128 4.346-8.582 7.07-8.582 2.393 0 3.39 1.408 5.316 1.408 1.622 0 2.898-1.408 5.303-1.408zM26.13 23c.478 3.004-2.246 6.718-5.502 6.598-.479-3.822 3.03-6.396 5.502-6.598z"/>
+    </g>
+</svg>
