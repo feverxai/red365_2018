@@ -2,81 +2,87 @@
 Instead edit gulp/templates/sprite */
 
 	.icon {
-		background-image: url('../../assets/images/sprites/sprite-e79e95cc.svg');
+		background-image: url('../../assets/images/sprites/sprite-eef7edc5.svg');
 	}
 
 	.no-svg .icon {
-		background-image: url('../../assets/images/sprites/sprite-e79e95cc.png');	
+		background-image: url('../../assets/images/sprites/sprite-eef7edc5.png');	
 	}
 
-	.icon--clear-view-escapes {
-		width: 144.4px;
-		height: 61.53px;
+	.icon--18 {
+		width: 46px;
+		height: 46px;
+		background-position: 32.857142857142854% 74.07407407407408%;
+	}
+
+	.icon--angle-right {
+		width: 26px;
+		height: 26px;
+		background-position: 11.304347826086957% 100%;
+	}
+
+	.icon--call {
+		width: 43px;
+		height: 42px;
+		background-position: 74.17840375586854% 72.53886010362694%;
+	}
+
+	.icon--call-center {
+		width: 30px;
+		height: 32px;
+		background-position: 92.03539823008849% 49.75369458128079%;
+	}
+
+	.icon--chevron-left {
+		width: 26px;
+		height: 26px;
+		background-position: 22.608695652173914% 100%;
+	}
+
+	.icon--chevron-right {
+		width: 26px;
+		height: 26px;
+		background-position: 0 100%;
+	}
+
+	.icon--fb {
+		width: 43px;
+		height: 42px;
+		background-position: 94.36619718309859% 72.53886010362694%;
+	}
+
+	.icon--fill-1 {
+		width: 26px;
+		height: 34px;
+		background-position: 79.1304347826087% 50.24875621890547%;
+	}
+
+	.icon--line {
+		width: 43px;
+		height: 42px;
+		background-position: 53.990610328638496% 72.53886010362694%;
+	}
+
+	.icon--noun-1231260-cc {
+		width: 69px;
+		height: 69px;
+		background-position: 0 84.33734939759036%;
+	}
+
+	.icon--noun-160439-cc {
+		width: 74px;
+		height: 101px;
+		background-position: 100% 0;
+	}
+
+	.icon--rectangle-1-google-play-icon-imported-layers-download-on-the-imported-layers {
+		width: 182px;
+		height: 70px;
+		background-position: 0 42.42424242424242%;
+	}
+
+	.icon--rectangle-1-google-play-icon-imported-layers-get-it-on {
+		width: 182px;
+		height: 70px;
 		background-position: 0 0;
-	}
-
-	.icon--comment {
-		width: 66px;
-		height: 66px;
-		background-position: 99.71014492753623% 0;
-	}
-
-	.icon--facebook {
-		width: 23.23px;
-		height: 44.01px;
-		background-position: 26.424310365536293% 45.92133741323979%;
-	}
-
-	.icon--fire {
-		width: 58px;
-		height: 66px;
-		background-position: 0 99.58035714285714%;
-	}
-
-	.icon--globe {
-		width: 66px;
-		height: 66px;
-		background-position: 28.019323671497585% 99.58035714285714%;
-	}
-
-	.icon--instagram {
-		width: 44.01px;
-		height: 44.01px;
-		background-position: 63.059522249879905% 49.25740726919919%;
-	}
-
-	.icon--mail {
-		width: 66px;
-		height: 50px;
-		background-position: 0 48.0703125%;
-	}
-
-	.icon--rain {
-		width: 66px;
-		height: 66px;
-		background-position: 99.71014492753623% 58.92857142857143%;
-	}
-
-	.icon--star {
-		width: 66px;
-		height: 66px;
-		background-position: 59.90338164251208% 99.58035714285714%;
-	}
-
-	.icon--twitter {
-		width: 53.78px;
-		height: 44.06px;
-		background-position: 94.15199343125627% 98.55159026429745%;
-	}
-
-	.icon--wifi {
-		width: 62px;
-		height: 66px;
-		background-position: 68.43601895734596% 0;
-	}
-
-	.icon--youtube {
-		width: 36.75px;
-		height: 44px;
-		background-position: 37.76931216931217% 45.917910447761194%;
 	}

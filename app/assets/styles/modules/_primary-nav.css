@@ -24,7 +24,7 @@
 		@mixin atMedium {
 			float: left;
 			display: block;
-			padding-right: 20px;
+			padding-right: 40px;
 		}
 	}
 
@@ -37,7 +37,7 @@
 
 	a {
 		color: #FFF;
-		font-weight: 300;
+		font-weight: 400;
 		text-decoration: none;
 		display: block;
 		padding: 5px 8px;
@@ -45,8 +45,8 @@
 		background-color: rgba($mainBlue, .5);
 
 		@mixin atMedium {
-			font-size: 1rem;
-			padding: 12px 0;
+			font-size: 1.5rem;
+			padding: 0 0;
 			background-color: transparent;
 
 			&.is-current-link {
@@ -54,4 +54,30 @@
 			}
 		}
 	}
+    
+    &__login {
+        @mixin atMedium {
+            li {
+                padding: 0 7.5px;
+                border-right: 2px solid #FFF;
+            }
+            li:last-child {
+		        padding-right: 0;
+                border-right: none;
+            }
+        }
+    }
+    &__lang {
+        @mixin atMedium {
+            margin-left: 20px;
+            li {
+                padding: 0 7.5px;
+                border-right: 2px solid #FFF;
+            }
+            li:last-child {
+		        padding-right: 0;
+                border-right: none;
+            }
+        }
+    }
 }

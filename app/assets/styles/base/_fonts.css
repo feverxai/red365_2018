@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "ThaiSansNeue";
+    src: url("../fonts/ThaiSansNeue-Thin.ttf");
+    font-weight: 200;
+}
+@font-face {
+    font-family: "ThaiSansNeue";
+    src: url("../fonts/ThaiSansNeue-Light.ttf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "ThaiSansNeue";
+    src: url("../fonts/ThaiSansNeue-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "ThaiSansNeue";
+    src: url("../fonts/ThaiSansNeue-Medium.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "ThaiSansNeue";
+    src: url("../fonts/ThaiSansNeue-SemiBold.ttf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "ThaiSansNeue";
+    src: url("../fonts/ThaiSansNeue-Bold.ttf");
+    font-weight: 700;
+}
