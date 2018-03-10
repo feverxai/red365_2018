@@ -1,0 +1,16 @@
+.howto {
+    display:flex;
+    justify-content:space-between;
+
+    &__register {
+        background-image: linear-gradient(to bottom, #333333, #000000);
+        height: 300px;
+    }
+
+    &__download {
+        background: url('../../assets/images/bg_how_to.png') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+    }
+}

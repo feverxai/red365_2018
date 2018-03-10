@@ -1,30 +1,30 @@
 @font-face {
-    font-family: "ThaiSansNeue";
-    src: url("../fonts/ThaiSansNeue-Thin.ttf");
+    font-family: "SukhumvitSet";
+    src: url("../fonts/SukhumvitSet-Thin.ttf");
     font-weight: 200;
 }
 @font-face {
-    font-family: "ThaiSansNeue";
-    src: url("../fonts/ThaiSansNeue-Light.ttf");
+    font-family: "SukhumvitSet";
+    src: url("../fonts/SukhumvitSet-Light.ttf");
     font-weight: 300;
 }
 @font-face {
-    font-family: "ThaiSansNeue";
-    src: url("../fonts/ThaiSansNeue-Regular.ttf");
+    font-family: "SukhumvitSet";
+    src: url("../fonts/SukhumvitSet-Text.ttf");
     font-weight: 400;
 }
 @font-face {
-    font-family: "ThaiSansNeue";
-    src: url("../fonts/ThaiSansNeue-Medium.ttf");
+    font-family: "SukhumvitSet";
+    src: url("../fonts/SukhumvitSet-Medium.ttf");
     font-weight: 500;
 }
 @font-face {
-    font-family: "ThaiSansNeue";
-    src: url("../fonts/ThaiSansNeue-SemiBold.ttf");
+    font-family: "SukhumvitSet";
+    src: url("../fonts/SukhumvitSet-SemiBold.ttf");
     font-weight: 600;
 }
 @font-face {
-    font-family: "ThaiSansNeue";
-    src: url("../fonts/ThaiSansNeue-Bold.ttf");
+    font-family: "SukhumvitSet";
+    src: url("../fonts/SukhumvitSet-Bold.ttf");
     font-weight: 700;
 }

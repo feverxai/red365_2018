@@ -129,7 +129,8 @@
 		}
 
 		@mixin atLarge {
-			margin-left: 150px;
+			margin-left: 140px;
+			margin-top: 7.5px;
 		}
 
 		&--is-visible {

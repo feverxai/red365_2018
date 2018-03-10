@@ -24,7 +24,7 @@
 		@mixin atMedium {
 			float: left;
 			display: block;
-			padding-right: 40px;
+			padding-right: 20px;
 		}
 	}
 
@@ -37,7 +37,7 @@
 
 	a {
 		color: #FFF;
-		font-weight: 400;
+		font-weight: 200;
 		text-decoration: none;
 		display: block;
 		padding: 5px 8px;
@@ -45,7 +45,7 @@
 		background-color: rgba($mainBlue, .5);
 
 		@mixin atMedium {
-			font-size: 1.5rem;
+			font-size: 1.0625rem;
 			padding: 0 0;
 			background-color: transparent;
 
@@ -56,6 +56,7 @@
 	}
     
     &__login {
+		float: right;
         @mixin atMedium {
             li {
                 padding: 0 7.5px;
@@ -69,7 +70,6 @@
     }
     &__lang {
         @mixin atMedium {
-            margin-left: 20px;
             li {
                 padding: 0 7.5px;
                 border-right: 2px solid #FFF;

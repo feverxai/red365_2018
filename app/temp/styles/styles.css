@@ -451,8 +451,8 @@ template {
 }
 
 body {
-	font-family: 'ThaiSansNeue', sans-serif;
-	color: #333;
+	font-family: 'SukhumvitSet', sans-serif;
+	background-color: #000;
 }
 
 img {
@@ -470,38 +470,38 @@ a {
 }
 
 @font-face {
-    font-family: "ThaiSansNeue";
-    src: url("../fonts/ThaiSansNeue-Thin.ttf");
+    font-family: "SukhumvitSet";
+    src: url("../fonts/SukhumvitSet-Thin.ttf");
     font-weight: 200;
 }
 
 @font-face {
-    font-family: "ThaiSansNeue";
-    src: url("../fonts/ThaiSansNeue-Light.ttf");
+    font-family: "SukhumvitSet";
+    src: url("../fonts/SukhumvitSet-Light.ttf");
     font-weight: 300;
 }
 
 @font-face {
-    font-family: "ThaiSansNeue";
-    src: url("../fonts/ThaiSansNeue-Regular.ttf");
+    font-family: "SukhumvitSet";
+    src: url("../fonts/SukhumvitSet-Text.ttf");
     font-weight: 400;
 }
 
 @font-face {
-    font-family: "ThaiSansNeue";
-    src: url("../fonts/ThaiSansNeue-Medium.ttf");
+    font-family: "SukhumvitSet";
+    src: url("../fonts/SukhumvitSet-Medium.ttf");
     font-weight: 500;
 }
 
 @font-face {
-    font-family: "ThaiSansNeue";
-    src: url("../fonts/ThaiSansNeue-SemiBold.ttf");
+    font-family: "SukhumvitSet";
+    src: url("../fonts/SukhumvitSet-SemiBold.ttf");
     font-weight: 600;
 }
 
 @font-face {
-    font-family: "ThaiSansNeue";
-    src: url("../fonts/ThaiSansNeue-Bold.ttf");
+    font-family: "SukhumvitSet";
+    src: url("../fonts/SukhumvitSet-Bold.ttf");
     font-weight: 700;
 }
 
@@ -568,7 +568,7 @@ a {
 .primary-nav li {
 			float: left;
 			display: block;
-			padding-right: 40px
+			padding-right: 20px
 	}
 	}
 
@@ -585,7 +585,7 @@ a {
 
 .primary-nav a {
 		color: #FFF;
-		font-weight: 400;
+		font-weight: 200;
 		text-decoration: none;
 		display: block;
 		padding: 5px 8px;
@@ -596,7 +596,7 @@ a {
 @media (min-width: 800px) {
 
 .primary-nav a {
-			font-size: 1.5rem;
+			font-size: 1.0625rem;
 			padding: 0 0;
 			background-color: transparent
 	}
@@ -605,6 +605,10 @@ a {
 				color: #fabb69;
 			}
 	}
+
+.primary-nav__login {
+		float: right;
+    }
 
 @media (min-width: 800px) {
             .primary-nav__login li {
@@ -618,10 +622,6 @@ a {
 	}
 
 @media (min-width: 800px) {
-
-.primary-nav__lang {
-            margin-left: 20px
-    }
             .primary-nav__lang li {
                 padding: 0 7.5px;
                 border-right: 2px solid #FFF;
@@ -642,7 +642,7 @@ a {
 }
 
 .wrapper--medium {
-		max-width: 976px;
+		max-width: 1100px;
 	}
 
 .wrapper--narrow {
@@ -698,7 +698,7 @@ a {
 @media (min-width: 800px) {
 
 .page-section {
-		padding: 4.5rem 0
+		padding: 2rem 0
 }
 	}
 
@@ -794,6 +794,11 @@ a {
 			width: 16.66%;
 		}
 
+		.row__medium-3 {
+			float: left;
+			width: 25%
+		}
+
 		.row__medium-4 {
 			float: left;
 			width: 33.33%;
@@ -803,9 +808,24 @@ a {
 			width: 37%;
 		}
 
+		.row__medium-5 {
+			float: left;
+			width: 41.67%;
+		}
+
 		.row__medium-6 {
 			float: left;
 			width: 50%
+		}
+
+		.row__medium-7 {
+			float: left;
+			width: 58.33%
+		}
+
+		.row__medium-7--smaller {
+			float: left;
+			width: 56.5%
 		}
 
 		.row__medium-8 {
@@ -1184,7 +1204,8 @@ Instead edit gulp/templates/sprite */
 @media (min-width: 1010px) {
 
 .site-header__menu-content {
-			margin-left: 150px
+			margin-left: 140px;
+			margin-top: 7.5px
 	}
 	}
 
@@ -1194,3 +1215,36 @@ Instead edit gulp/templates/sprite */
 			-webkit-transform: scale(1);
 			        transform: scale(1);
 		}
+
+.banner {
+    background: url('../../assets/images/Herobanner.png') no-repeat;
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 41.67%;
+    margin-top: 100px;
+}
+
+.howto {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack:justify;
+        -ms-flex-pack:justify;
+            justify-content:space-between;
+}
+
+.howto__register {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#000000));
+        background-image: linear-gradient(to bottom, #333333, #000000);
+        height: 300px;
+    }
+
+.howto__download {
+        background: url('../../assets/images/bg_how_to.png') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+    }
