@@ -1,0 +1,10 @@
+.circle-img-outer {
+    border:2px solid #FFF;
+    padding:25px;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

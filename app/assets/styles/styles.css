@@ -1,9 +1,11 @@
+@import "font-awesome";
 @import "normalize.css";
 @import "base/_variable.css";
 @import "base/_mixins.css";
 @import "base/_global";
 @import "base/_fonts";
 @import "modules/_btn";
+@import "modules/_bg";
 @import "modules/_primary-nav";
 @import "modules/_wrapper";
 @import "modules/_page-section";
@@ -14,3 +16,5 @@
 @import "modules/_site-header";
 @import "modules/_banner";
 @import "modules/_howto";
+@import "modules/_promotion";
+@import "modules/_circle-img-outer";

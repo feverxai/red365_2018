@@ -1,16 +1,61 @@
 .howto {
     display:flex;
     justify-content:space-between;
+    align-items: stretch;
 
     &__register {
         background-image: linear-gradient(to bottom, #333333, #000000);
-        height: 300px;
+        padding: 30px;
+
+        &--inside {
+            margin-top:20px;
+            padding:10px;
+        }
+
+        &-step {
+            text-align: center;
+            font-size: 1.165rem;
+
+            & > p {
+                margin-top: 0;
+                line-height: 1.5;
+            }
+
+            &--t-padding {
+                margin-top: 25px;
+            }
+        }
+
+        &__icon {
+            display: inline-block;
+        }
     }
 
     &__download {
         background: url('../../assets/images/bg_how_to.png') no-repeat;
         background-size: cover;
         background-position: center center;
-        height: 300px;
+        text-align: center;
+        padding: 30px;
+
+        &-store {
+            margin: 50px 0;
+        }
+    }
+
+    &__header {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    &__sub-header {
+        font-size: 1.0625rem;
+        padding: 15px 0;
+    }
+
+    &--equal-height {
+        display:flex;
+        justify-content:space-between;
+        align-items:flex-start;
     }
 }

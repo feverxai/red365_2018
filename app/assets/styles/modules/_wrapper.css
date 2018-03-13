@@ -46,4 +46,8 @@
 			margin-bottom: 3.875rem;
 		}
 	}
+	
+	&--gradient {
+        background-image: linear-gradient(to top, #606060, #000000);
+    }
 }
