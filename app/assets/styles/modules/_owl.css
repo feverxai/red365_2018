@@ -1,0 +1,18 @@
+.owl-nav [class*='owl-']:hover {
+    background: transparent !important;
+    color: $mainOrange !important;
+}
+.owl-prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-size: 70px !important;
+    transform: translateY(-50%);
+}
+.owl-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    font-size: 70px !important;
+    transform: translateY(-50%);
+}

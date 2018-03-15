@@ -1,5 +1,7 @@
 @import "font-awesome";
 @import "normalize.css";
+@import "owl.carousel/dist/assets/owl.carousel.css";
+@import "owl.carousel/dist/assets/owl.theme.default.css";
 @import "base/_variable.css";
 @import "base/_mixins.css";
 @import "base/_global";
@@ -18,3 +20,5 @@
 @import "modules/_howto";
 @import "modules/_promotion";
 @import "modules/_circle-img-outer";
+@import "modules/_game";
+@import "modules/_owl";

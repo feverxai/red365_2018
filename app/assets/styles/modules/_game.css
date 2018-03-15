@@ -1,0 +1,17 @@
+.game {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 50px;
+
+    &__item {
+        width: 15%;
+        text-align: center;
+        margin: 20px;
+        & > p {
+            font-size: 1.165rem;
+        }
+    }
+
+    
+}
