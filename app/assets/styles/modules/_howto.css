@@ -2,27 +2,59 @@
     display:flex;
     justify-content:space-between;
     align-items: stretch;
+    flex-wrap: wrap;
 
     &__register {
         background-image: linear-gradient(to bottom, #333333, #000000);
-        padding: 30px;
+        padding: 20px;
+        width: 100%;
+
+        @mixin atMedium {
+            padding: 30px;
+            width: auto;
+        }
 
         &--inside {
-            margin-top:20px;
-            padding:10px;
+            margin-top: 0;
+            padding: 10px 0;
+
+            @mixin atMedium {
+                margin-top: 20px;
+                padding: 10px;
+            }
         }
 
         &-step {
             text-align: center;
-            font-size: 1.165rem;
+            font-size: 1rem;
+
+            @mixin atMedium {
+                font-size: 1.165rem;
+            }
 
             & > p {
-                margin-top: 0;
+                margin-top: auto;
                 line-height: 1.5;
+
+                @mixin atMedium {
+                    margin-top: 0;
+                }
             }
 
             &--t-padding {
-                margin-top: 25px;
+                margin-top: 15px;
+
+                @mixin atMedium {
+                    margin-top: 25px;
+                }
+            }
+
+            &--t-padding-at-small {
+                margin-top: 15px;
+
+                @mixin atMedium {
+                    margin-top: 0;
+                }
             }
         }
 
@@ -36,26 +68,47 @@
         background-size: cover;
         background-position: center center;
         text-align: center;
-        padding: 30px;
+        padding: 20px;
+        width: 100%;
+
+        @mixin atMedium {
+            padding: 30px;
+            width: auto;
+        }
 
         &-store {
-            margin: 50px 0;
+            margin: 10px 0;
+
+            @mixin atMedium {
+                margin: 50px 0;
+            }
         }
     }
 
     &__header {
-        font-size: 2rem;
-        font-weight: 500;
+        font-size: 1.5rem;
+        @mixin atMedium {
+            font-size: 2rem;
+            font-weight: 500;
+        }
     }
 
     &__sub-header {
         font-size: 1.0625rem;
-        padding: 15px 0;
+        padding: 10px 0;
+
+        @mixin atMedium {
+            padding: 15px 0;
+        }
     }
 
     &--equal-height {
         display:flex;
         justify-content:space-between;
         align-items:flex-start;
+
+        & > div {
+            margin-left:10px;
+        }
     }
 }

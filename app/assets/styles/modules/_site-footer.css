@@ -1,8 +1,13 @@
 .site-footer {
 	background-color: #323232;
 	color: #FFF;
-	padding: 1.5rem 0;
+	padding: 1.5rem 0 3rem 0;
 	text-align: center;
+	font-size: 0.8rem;
+
+	@mixin atMedium {
+		font-size: 1rem;
+	}
 
 	&__text {
 		display: block;
@@ -23,16 +28,29 @@
 
 	&__bank-list {
 		margin-bottom: 1.5rem;
+
+		& > img {
+			width: 46px;
+
+			@mixin atMedium {
+				width: auto;
+			}
+		}
 	}
 
 	&__guarantee {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-wrap: wrap;
 		margin-bottom: 20px;
 		
 		img {
-			margin: 0 20px;
+			margin: 0 10px;
+
+			@mixin atMedium {
+				margin: 0 20px;
+			}
 		}
 	}
 
@@ -41,5 +59,40 @@
 		border: none;
 		background-color: #FFF;
   		opacity: 0.45;
+	}
+
+	&__contact {
+		position: fixed;
+		background: none;
+		height: 42px;
+		width: 100%;
+		bottom: 0;
+		z-index: 10;
+
+		&--sticky {
+			background: none;
+		}
+
+		& > div {
+			display: flex;
+			align-items: center;
+		}
+
+		& img {
+			margin-top: 2px;
+			margin-left: 5px;
+		}
+	}
+
+	&__cc {
+		background: #000;
+		padding: 5px;
+		display: flex;
+		align-items: center;
+		border-radius: 4px;
+
+		& > img {
+			margin: 0 5px;
+		}
 	}
 }

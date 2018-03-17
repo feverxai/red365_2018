@@ -14008,10 +14008,21 @@ var mobileMenu = new _MobileMenu2.default();
 // import StickyHeader from './modules/StickyHeader';
 var modal = new _Modal2.default();
 
-(0, _jquery2.default)('.owl-carousel').owlCarousel({
+(0, _jquery2.default)('#game-carousel').owlCarousel({
     loop: true,
     nav: true,
     dots: false,
+    items: 1
+});
+
+(0, _jquery2.default)('#banner-carousel').owlCarousel({
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    loop: true,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
     items: 1
 });
 

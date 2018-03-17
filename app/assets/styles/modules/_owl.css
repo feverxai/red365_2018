@@ -16,3 +16,11 @@
     font-size: 70px !important;
     transform: translateY(-50%);
 }
+
+.owl-dots {
+    display: none;
+
+    @mixin atMedium {
+        display: block;
+    }
+}

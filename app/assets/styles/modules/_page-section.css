@@ -1,5 +1,5 @@
 .page-section {
-	padding: 1.2rem 0;
+	padding: 0 0;
 
 	@mixin atMedium {
 		padding: 2rem 0;
@@ -42,6 +42,11 @@
 			overflow: hidden;
 			text-align: center;
 			padding: 10px;
+			font-size: 1.5rem;
+
+			@mixin atMedium {
+				font-size: 2rem;
+			}
 		}
 
 		h1:before,
