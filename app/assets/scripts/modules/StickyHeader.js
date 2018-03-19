@@ -6,7 +6,6 @@ class StickyHeader {
 	constructor() {
 		this.siteHeader = $(".site-header");
 		this.headerTriggerElement = $(".site-header");
-		this.createHeaderWaypoint();
 		this.pageSections = $(".page-section");
 		this.headerLink = $(".primary-nav a");
 		this.createPageSectionWaypoints();
@@ -15,20 +14,6 @@ class StickyHeader {
 
 	addSmoothScrolling() {
 		this.headerLink.smoothScroll();
-	}
-
-	createHeaderWaypoint() {
-		var that = this;
-		new Waypoint({
-			element: this.headerTriggerElement[0],
-			handler: function(direction) {
-				if(direction == "down") {
-					that.siteHeader.addClass("site-header--dark");
-				} else {
-					that.siteHeader.removeClass("site-header--dark");
-				}
-			}
-		});
 	}
 
 	createPageSectionWaypoints() {

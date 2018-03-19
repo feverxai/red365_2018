@@ -1,8 +1,14 @@
 .primary-nav {
-	padding-top: 10px;
+	height: 100vh;
+	background: #1a1a1a;
+	width: 80%;
+	position: relative;
 
 	@mixin atMedium {
 		padding-top: 0;
+		height: auto;
+		background: none;
+		width: auto;
 	}
 	
 	&--pull-right {
@@ -19,11 +25,9 @@
 
 	li {
 		list-style: none;
-		display: inline-block;
-		padding-right: 7px;
 		@mixin atMedium {
 			float: left;
-			display: block;
+			width: auto;
 			padding-right: 20px;
 		}
 	}
@@ -40,17 +44,24 @@
 		font-weight: 200;
 		text-decoration: none;
 		display: block;
-		padding: 5px 8px;
-		font-size: .8rem;
-		background-color: rgba($mainBlue, .5);
+		padding: 18px 18px;
+		font-size: 1.125rem;
+		background-color: #292929;
+		border: solid 1px rgba(255, 255, 255, 0.1);
 
 		@mixin atMedium {
 			font-size: 1.0625rem;
 			padding: 0 0;
 			background-color: transparent;
+			border: none;
+		}
 
-			&.is-current-link, &:hover {
-				color: $mainOrange;
+		&.is-current-link, &:hover {
+			color: $mainOrange;
+			background: #1a1a1a;
+
+			@mixin atMedium {
+				background: none;
 			}
 		}
 	}

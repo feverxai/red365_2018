@@ -68,6 +68,11 @@
 		width: 100%;
 		bottom: 0;
 		z-index: 10;
+		display: none;
+
+		@mixin atMedium {
+			display: block;
+		}
 
 		&--sticky {
 			background: none;

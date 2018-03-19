@@ -6240,11 +6240,17 @@ a {
     
 }
 .primary-nav {
-	padding-top: 10px;
+	height: 100vh;
+	background: #1a1a1a;
+	width: 80%;
+	position: relative;
 }
 @media (min-width: 800px) {
 .primary-nav {
-		padding-top: 0
+		padding-top: 0;
+		height: auto;
+		background: none;
+		width: auto
 }
 	}
 @media (min-width: 800px) {
@@ -6263,13 +6269,11 @@ a {
 	}
 .primary-nav li {
 		list-style: none;
-		display: inline-block;
-		padding-right: 7px;
 	}
 @media (min-width: 800px) {
 .primary-nav li {
 			float: left;
-			display: block;
+			width: auto;
 			padding-right: 20px
 	}
 	}
@@ -6286,20 +6290,27 @@ a {
 		font-weight: 200;
 		text-decoration: none;
 		display: block;
-		padding: 5px 8px;
-		font-size: .8rem;
-		background-color: rgba(47,85,114, .5);
+		padding: 18px 18px;
+		font-size: 1.125rem;
+		background-color: #292929;
+		border: solid 1px rgba(255, 255, 255, 0.1);
 	}
 @media (min-width: 800px) {
 .primary-nav a {
 			font-size: 1.0625rem;
 			padding: 0 0;
-			background-color: transparent
+			background-color: transparent;
+			border: none
 	}
-
-			.primary-nav a.is-current-link, .primary-nav a:hover {
-				color: #ffab00;
-			}
+	}
+.primary-nav a.is-current-link, .primary-nav a:hover {
+			color: #ffab00;
+			background: #1a1a1a;
+		}
+@media (min-width: 800px) {
+.primary-nav a.is-current-link, .primary-nav a:hover {
+				background: none
+		}
 	}
 .primary-nav__login {
 		float: right;
@@ -6746,6 +6757,12 @@ Instead edit gulp/templates/sprite */
 		width: 100%;
 		bottom: 0;
 		z-index: 10;
+		display: none;
+	}
+@media (min-width: 800px) {
+.site-footer__contact {
+			display: block
+	}
 	}
 .site-footer__contact--sticky {
 			background: none;
@@ -6777,7 +6794,7 @@ Instead edit gulp/templates/sprite */
 			margin: 0 5px;
 		}
 .site-header {
-	position: absolute;
+	position: fixed;
 	padding: 10px 0;
 	width: 100%;
 	z-index: 2;
@@ -6792,7 +6809,6 @@ Instead edit gulp/templates/sprite */
 	}
 @media (min-width: 800px) {
 .site-header {
-		position: fixed;
 		height: 100px;
 		padding: 35px 0
 }
@@ -6840,8 +6856,8 @@ Instead edit gulp/templates/sprite */
 		height: 19px;
 		position: absolute;
 		z-index: 10;
-		top: 10px;
-		right: 10px;
+		top: 25px;
+		left: 18px;
 	}
 .site-header__menu-icon::before {
 			content: "";
@@ -6905,14 +6921,15 @@ Instead edit gulp/templates/sprite */
 		}
 .site-header__menu-content {
 		opacity: 0;
-		-webkit-transform: scale(1.2);
-		        transform: scale(1.2);
+		/* transform: scale(1.2); */
+		-webkit-transform: translateX(-100%);
+		        transform: translateX(-100%);
 		-webkit-transition: all 0.3s ease-out;
 		transition: all 0.3s ease-out;
 		position: relative;
 		z-index: -10;
-		padding-top: 90px;
-		text-align: center;
+		padding-top: 60px;
+		text-align: left;
 	}
 @media (min-width: 800px) {
 .site-header__menu-content {
@@ -6920,7 +6937,8 @@ Instead edit gulp/templates/sprite */
 			z-index: 1;
 			padding-top: 0px;
 			-webkit-transform: scale(1);
-			        transform: scale(1)
+			        transform: scale(1);
+			text-align: center
 	}
 	}
 @media (min-width: 1010px) {
@@ -6932,9 +6950,28 @@ Instead edit gulp/templates/sprite */
 .site-header__menu-content--is-visible {
 			opacity: 1;
 			z-index: 1;
-			-webkit-transform: scale(1);
-			        transform: scale(1);
+			-webkit-transform: translateX(0);
+			        transform: translateX(0);
+			/* transform: scale(1); */
 		}
+.site-header__contact {
+		text-align: center;
+		display: block;
+		margin-top: 90px;
+	}
+@media (min-width: 800px) {
+.site-header__contact {
+			display: none
+	}
+	}
+.site-header__contact img {
+			-webkit-transform: scale(0.6);
+			        transform: scale(0.6);
+		}
+.site-header__cc {
+		font-size: 0.8rem;
+		margin-top: 5px;
+	}
 .banner {
     background: url('../../assets/images/Herobanner.png') no-repeat;
     background-position: center top;

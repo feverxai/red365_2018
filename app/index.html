@@ -14,7 +14,7 @@
 
 <body>
   <header class="site-header">
-    <div class="wrapper wrapper--medium">
+    <div class="wrapper wrapper--medium wrapper--no-padding-until-medium">
       <div class="site-header__logo">
         <img src="assets/images/red-365-logo.png" alt="" />
       </div>
@@ -29,7 +29,7 @@
             <nav class="primary-nav">
               <ul>
                 <li>
-                  <a class="is-current-link" href="#" id="">หน้าแรก</a>
+                  <a class="is-current-link" href="#" id="home">หน้าแรก</a>
                 </li>
                 <li>
                   <a href="#" id="">แจ้งฝากถอน</a>
@@ -38,15 +38,24 @@
                   <a href="#" id="">วิธีการติดตั้ง</a>
                 </li>
                 <li>
-                  <a href="#" id="">เกมส์</a>
+                  <a href="#promotion" id="promotion-link">โปรโมชั่น</a>
                 </li>
                 <li>
-                  <a href="#" id="">โปรโมชั่น</a>
+                  <a href="#game" id="game-link">เกมส์</a>
                 </li>
                 <li>
                   <a href="#" id="">ติดต่อเรา</a>
                 </li>
               </ul>
+
+              <div class="site-header__contact">
+                <div>
+                  <img src="assets/images/fb.png" alt="">
+                  <img src="assets/images/line.png" alt="">
+                  <img src="assets/images/call.png" alt="">
+                </div>
+                <div class="site-header__cc">Call Center 098-242-3281</div>
+              </div>
             </nav>
           </div>
           <!-- <div class="row__medium-3">
@@ -81,7 +90,7 @@
     </div>
   </div>
   <div class="wrapper wrapper--medium wrapper--no-padding-until-medium">
-    <section class="page-section howto">
+    <div class="page-section howto">
       <div class="howto__register row__medium-7--smaller">
         <div class="howto__header">สมัครสมาชิก</div>
         <div class="howto__register--inside howto--equal-height">
@@ -137,10 +146,10 @@
           </a>
         </div>
       </div>
-    </section>
+    </div>
   </div>
   <div class="wrapper wrapper--medium wrapper--gradient wrapper--no-padding-until-medium">
-    <section class="page-section">
+    <div id="promotion" class="page-section" data-matching-link="#promotion-link">
       <div class="page-section__headline">
         <h1>โปรโมชั่น</h1>
       </div>
@@ -150,10 +159,10 @@
       <div class="promotion">
         <img src="https://dummyimage.com/1440x400/fff/000" alt="">
       </div>
-    </section>
+    </div>
   </div>
   <div class="wrapper wrapper--medium wrapper--no-padding-until-medium">
-    <section class="page-section">
+    <div id="game" class="page-section" data-matching-link="#game-link">
       <div class="page-section__headline">
         <h1>เกมส์</h1>
       </div>
@@ -245,7 +254,7 @@
         </div>
 
       </div>
-    </section>
+    </div>
   </div>
 
 
