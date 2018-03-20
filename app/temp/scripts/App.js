@@ -14093,13 +14093,6 @@ var mobileMenu = new _MobileMenu2.default();
 var stickyHeader = new _StickyHeader2.default();
 var modal = new _Modal2.default();
 
-(0, _jquery2.default)('#game-carousel').owlCarousel({
-    loop: true,
-    nav: true,
-    dots: false,
-    items: 1
-});
-
 (0, _jquery2.default)('#banner-carousel').owlCarousel({
     animateOut: 'slideOutDown',
     animateIn: 'flipInX',
@@ -14109,6 +14102,34 @@ var modal = new _Modal2.default();
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
     items: 1
+});
+
+var owl = (0, _jquery2.default)('#game-carousel'),
+    owlOptions = {
+    loop: true,
+    nav: true,
+    dots: false,
+    items: 1
+};
+
+if ((0, _jquery2.default)(window).width() > 767) {
+    var owlActive = owl.owlCarousel(owlOptions);
+} else {
+    owl.addClass('off');
+}
+
+(0, _jquery2.default)(window).resize(function () {
+    if ((0, _jquery2.default)(window).width() > 767) {
+        if ((0, _jquery2.default)('.owl-carousel').hasClass('off')) {
+            var owlActive = owl.owlCarousel(owlOptions);
+            owl.removeClass('off');
+        }
+    } else {
+        if (!(0, _jquery2.default)('.owl-carousel').hasClass('off')) {
+            owl.addClass('off').trigger('destroy.owl.carousel');
+            owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
+        }
+    }
 });
 
 /***/ }),

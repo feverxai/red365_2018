@@ -113,7 +113,6 @@
 	}
 
 	&__menu-content {
-		opacity: 0;
 		/* transform: scale(1.2); */
 		transform: translateX(-100%);
 		transition: all 0.3s ease-out;
@@ -121,11 +120,13 @@
 		z-index: -10;
 		padding-top: 60px;
 		text-align: left;
+		height: 0;
 
 		@mixin atMedium {
 			opacity: 1;
 			z-index: 1;
 			padding-top: 0px;
+			height: auto;
 			transform: scale(1);
 			text-align: center;
 		}
@@ -136,8 +137,8 @@
 		}
 
 		&--is-visible {
-			opacity: 1;
 			z-index: 1;
+			height: 100vh;
 			transform: translateX(0);
 			/* transform: scale(1); */
 		}

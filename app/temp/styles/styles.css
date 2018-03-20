@@ -6920,7 +6920,6 @@ Instead edit gulp/templates/sprite */
 			        transform: rotate(-45deg) scaleX(1.25) translateY(1px);
 		}
 .site-header__menu-content {
-		opacity: 0;
 		/* transform: scale(1.2); */
 		-webkit-transform: translateX(-100%);
 		        transform: translateX(-100%);
@@ -6930,12 +6929,14 @@ Instead edit gulp/templates/sprite */
 		z-index: -10;
 		padding-top: 60px;
 		text-align: left;
+		height: 0;
 	}
 @media (min-width: 800px) {
 .site-header__menu-content {
 			opacity: 1;
 			z-index: 1;
 			padding-top: 0px;
+			height: auto;
 			-webkit-transform: scale(1);
 			        transform: scale(1);
 			text-align: center
@@ -6948,8 +6949,8 @@ Instead edit gulp/templates/sprite */
 	}
 	}
 .site-header__menu-content--is-visible {
-			opacity: 1;
 			z-index: 1;
+			height: 100vh;
 			-webkit-transform: translateX(0);
 			        transform: translateX(0);
 			/* transform: scale(1); */
@@ -7161,17 +7162,20 @@ Instead edit gulp/templates/sprite */
         -ms-flex-align: center;
             align-items: center;
     padding: 0 50px;
-
-    
 }
 .game__item {
-        width: 15%;
+        width: 31%;
         text-align: center;
         margin: 20px;
     }
 .game__item > p {
             font-size: 1.165rem;
         }
+@media (min-width: 530px) {
+.game__item {
+            width: 15%
+    }
+	}
 .owl-nav [class*='owl-']:hover {
     background: transparent !important;
     color: #ffab00 !important;
@@ -7200,3 +7204,6 @@ Instead edit gulp/templates/sprite */
         display: block
 }
 	}
+.owl-carousel.off {
+    display: block;
+}
