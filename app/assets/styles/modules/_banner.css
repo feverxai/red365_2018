@@ -15,10 +15,10 @@
 
     &__inner {
         position: absolute;
-        top: 18.4%;
-        left: 17%;
-        bottom: 20.5%;
-        right: 45%;
+        top: 5%;
+        left: 5%;
+        bottom: 5%;
+        right: 19%;
         background-color: rgba(0, 0, 0, 0.53);
     }
 }
