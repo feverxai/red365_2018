@@ -13,7 +13,7 @@ class StickyHeader {
 	}
 
 	addSmoothScrolling() {
-		this.headerLink.smoothScroll();
+		this.headerLink.smoothScroll({offset: -50});
 	}
 
 	createPageSectionWaypoints() {

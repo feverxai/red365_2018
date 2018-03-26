@@ -6802,6 +6802,7 @@ Instead edit gulp/templates/sprite */
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#535353) , to(#000000));
 	background-image: linear-gradient(to bottom, #535353 , #000000);
 	height: 70px;
+	top: 0;
 }
 .site-header--is-expanded {
 		background-color: rgba(47,85,114, 0.55);

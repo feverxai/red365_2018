@@ -29,7 +29,7 @@
             <nav class="primary-nav">
               <ul>
                 <li>
-                  <a class="is-current-link" href="#" id="home">หน้าแรก</a>
+                  <a class="is-current-link" href="#" id="home-link">หน้าแรก</a>
                 </li>
                 <li>
                   <a href="#" id="">แจ้งฝากถอน</a>
@@ -79,8 +79,8 @@
     </div>
   </header>
 
-  <div class="wrapper wrapper--no-padding-until-medium">
-    <div class="banner">
+  <div id="home" class="banner page-section" data-matching-link="#home-link">
+    <div class="wrapper wrapper--no-padding-until-medium">
       <div class="banner__inner">
         <div id="banner-carousel" class="owl-carousel owl-theme">
           <img class="item" src="assets/images/1000.png" alt="">
@@ -89,8 +89,8 @@
       </div>
     </div>
   </div>
-  <div class="wrapper wrapper--medium wrapper--no-padding-until-medium">
-    <div class="page-section howto">
+  <div class="page-section howto">
+    <div class="wrapper wrapper--medium wrapper--no-padding-until-medium">
       <div class="howto__register row__medium-7--smaller">
         <div class="howto__header">สมัครสมาชิก</div>
         <div class="howto__register--inside howto--equal-height">
@@ -148,8 +148,9 @@
       </div>
     </div>
   </div>
-  <div class="wrapper wrapper--medium wrapper--gradient wrapper--no-padding-until-medium">
-    <div id="promotion" class="page-section" data-matching-link="#promotion-link">
+  
+  <div id="promotion" class="page-section" data-matching-link="#promotion-link">
+    <div class="wrapper wrapper--medium wrapper--gradient wrapper--no-padding-until-medium">
       <div class="page-section__headline">
         <h1>โปรโมชั่น</h1>
       </div>
@@ -161,8 +162,9 @@
       </div>
     </div>
   </div>
-  <div class="wrapper wrapper--medium wrapper--no-padding-until-medium">
-    <div id="game" class="page-section" data-matching-link="#game-link">
+
+  <div id="game" class="page-section" data-matching-link="#game-link">
+    <div class="wrapper wrapper--medium wrapper--no-padding-until-medium">
       <div class="page-section__headline">
         <h1>เกมส์</h1>
       </div>

@@ -6,6 +6,7 @@
 	transition: background-color 0.3s ease-out;
 	background-image: linear-gradient(to bottom, #535353 , #000000);
 	height: 70px;
+	top: 0;
 
 	&--is-expanded {
 		background-color: rgba($mainBlue, 0.55);
