@@ -10643,13 +10643,13 @@ exports.default = StickyHeader;
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, jQuery) {/**
- * Owl Carousel v2.3.2
+ * Owl Carousel v2.3.3
  * Copyright 2013-2018 David Deutsch
  * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
  */
 /**
  * Owl carousel
- * @version 2.3.2
+ * @version 2.3.3
  * @author Bartosz Wojciechowski
  * @author David Deutsch
  * @license The MIT License (MIT)
@@ -10832,6 +10832,7 @@ exports.default = StickyHeader;
 		loop: false,
 		center: false,
 		rewind: false,
+		checkVisibility: true,
 
 		mouseDrag: true,
 		touchDrag: true,
@@ -12393,7 +12394,7 @@ exports.default = StickyHeader;
 
 /**
  * AutoRefresh Plugin
- * @version 2.3.2
+ * @version 2.3.3
  * @author Artus Kolanowski
  * @author David Deutsch
  * @license The MIT License (MIT)
@@ -12505,7 +12506,7 @@ exports.default = StickyHeader;
 
 /**
  * Lazy Plugin
- * @version 2.3.2
+ * @version 2.3.3
  * @author Bartosz Wojciechowski
  * @author David Deutsch
  * @license The MIT License (MIT)
@@ -12645,7 +12646,7 @@ exports.default = StickyHeader;
 
 /**
  * AutoHeight Plugin
- * @version 2.3.2
+ * @version 2.3.3
  * @author Bartosz Wojciechowski
  * @author David Deutsch
  * @license The MIT License (MIT)
@@ -12770,7 +12771,7 @@ exports.default = StickyHeader;
 
 /**
  * Video Plugin
- * @version 2.3.2
+ * @version 2.3.3
  * @author Bartosz Wojciechowski
  * @author David Deutsch
  * @license The MIT License (MIT)
@@ -13090,7 +13091,7 @@ exports.default = StickyHeader;
 
 /**
  * Animate Plugin
- * @version 2.3.2
+ * @version 2.3.3
  * @author Bartosz Wojciechowski
  * @author David Deutsch
  * @license The MIT License (MIT)
@@ -13212,7 +13213,7 @@ exports.default = StickyHeader;
 
 /**
  * Autoplay Plugin
- * @version 2.3.2
+ * @version 2.3.3
  * @author Bartosz Wojciechowski
  * @author Artus Kolanowski
  * @author David Deutsch
@@ -13346,7 +13347,7 @@ exports.default = StickyHeader;
 			this._timeout * (Math.round(this.read() / this._timeout) + 1) - this.read()
 		);
 
-		if (this._core.is('busy') || this._core.is('interacting') || document.hidden) {
+		if (this._core.is('interacting') || document.hidden) {
 			return;
 		}
 		this._core.next(speed || this._core.settings.autoplaySpeed);
@@ -13446,7 +13447,7 @@ exports.default = StickyHeader;
 
 /**
  * Navigation Plugin
- * @version 2.3.2
+ * @version 2.3.3
  * @author Artus Kolanowski
  * @author David Deutsch
  * @license The MIT License (MIT)
@@ -13853,7 +13854,7 @@ exports.default = StickyHeader;
 
 /**
  * Hash Plugin
- * @version 2.3.2
+ * @version 2.3.3
  * @author Artus Kolanowski
  * @author David Deutsch
  * @license The MIT License (MIT)
@@ -13977,7 +13978,7 @@ exports.default = StickyHeader;
 /**
  * Support Plugin
  *
- * @version 2.3.2
+ * @version 2.3.3
  * @author Vivid Planet Software GmbH
  * @author Artus Kolanowski
  * @author David Deutsch

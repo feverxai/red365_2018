@@ -5946,7 +5946,7 @@ template {
   animation-name: slideOutUp;
 }
 /**
- * Owl Carousel v2.3.2
+ * Owl Carousel v2.3.3
  * Copyright 2013-2018 David Deutsch
  * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
  */
@@ -6003,7 +6003,6 @@ template {
   .owl-carousel .owl-nav .owl-next,
   .owl-carousel .owl-dot {
     cursor: pointer;
-    cursor: hand;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -6122,7 +6121,7 @@ template {
   height: 100%;
   width: 100%; }
 /**
- * Owl Carousel v2.3.2
+ * Owl Carousel v2.3.3
  * Copyright 2013-2018 David Deutsch
  * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
  */
@@ -7125,6 +7124,7 @@ Instead edit gulp/templates/sprite */
         }
 .promotion {
     margin: 20px 0;
+    text-align: center;
 }
 .circle-img-outer {
     border:2px solid #FFF;
