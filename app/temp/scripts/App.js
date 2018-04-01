@@ -14099,6 +14099,7 @@ var modal = new _Modal2.default();
     animateIn: 'flipInX',
     loop: true,
     nav: false,
+    dots: false,
     autoplay: true,
     autoplayTimeout: 5000,
     autoplayHoverPause: true,

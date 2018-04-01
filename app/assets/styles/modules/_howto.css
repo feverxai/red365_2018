@@ -1,8 +1,12 @@
 .howto {
-    display:flex;
-    justify-content:space-between;
-    align-items: stretch;
-    flex-wrap: wrap;
+    display: block;
+
+    @mixin atMedium {
+        display:flex;
+        justify-content:space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
 
     &__register {
         background-image: linear-gradient(to bottom, #333333, #000000);

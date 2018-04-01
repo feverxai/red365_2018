@@ -13,6 +13,7 @@ $('#banner-carousel').owlCarousel({
     animateIn: 'flipInX',
     loop: true,
     nav: false,
+    dots: false,
     autoplay:true,
     autoplayTimeout:5000,
     autoplayHoverPause:true,

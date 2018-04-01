@@ -6993,23 +6993,27 @@ Instead edit gulp/templates/sprite */
         position: absolute;
         top: 5%;
         left: 5%;
-        bottom: 5%;
         right: 19%;
         background-color: rgba(0, 0, 0, 0.53);
     }
 .howto {
-    display:-webkit-box;
-    display:-ms-flexbox;
-    display:flex;
-    -webkit-box-pack:justify;
-        -ms-flex-pack:justify;
-            justify-content:space-between;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    display: block;
 }
+@media (min-width: 800px) {
+.howto {
+        display:-webkit-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-box-pack:justify;
+            -ms-flex-pack:justify;
+                justify-content:space-between;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap
+}
+	}
 .howto__register {
         background-image: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#000000));
         background-image: linear-gradient(to bottom, #333333, #000000);
