@@ -17,6 +17,14 @@
 		}
 	}
 
+	&--visible-medium {
+		display: none;
+
+		@mixin atMedium {
+			display: block;
+		}
+	}
+
 	ul {
 		margin: 0;
 		padding: 0;
@@ -29,6 +37,14 @@
 			float: left;
 			width: auto;
 			padding-right: 20px;
+		}
+
+		&.visible-small {
+			display: block;
+
+			@mixin atMedium {
+				display: none;
+			}
 		}
 	}
 
@@ -56,7 +72,7 @@
 			border: none;
 		}
 
-		&.is-current-link, &:hover {
+		&.is-current-link,&.is-active, &:hover {
 			color: $mainOrange;
 			background: #1a1a1a;
 
@@ -64,6 +80,7 @@
 				background: none;
 			}
 		}
+
 	}
     
     &__login {

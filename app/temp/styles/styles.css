@@ -6257,6 +6257,14 @@ a {
 			float: right
 	}
 	}
+.primary-nav--visible-medium {
+		display: none;
+	}
+@media (min-width: 800px) {
+.primary-nav--visible-medium {
+			display: block
+	}
+	}
 .primary-nav ul {
 		margin: 0;
 		padding: 0;
@@ -6276,6 +6284,14 @@ a {
 			padding-right: 20px
 	}
 	}
+.primary-nav li.visible-small {
+			display: block;
+		}
+@media (min-width: 800px) {
+.primary-nav li.visible-small {
+				display: none
+		}
+	}
 .primary-nav li:last-child {
 		padding-right: 0;
 	}
@@ -6293,6 +6309,7 @@ a {
 		font-size: 1.125rem;
 		background-color: #292929;
 		border: solid 1px rgba(255, 255, 255, 0.1);
+
 	}
 @media (min-width: 800px) {
 .primary-nav a {
@@ -6300,14 +6317,15 @@ a {
 			padding: 0 0;
 			background-color: transparent;
 			border: none
+
 	}
 	}
-.primary-nav a.is-current-link, .primary-nav a:hover {
+.primary-nav a.is-current-link,.primary-nav a.is-active,.primary-nav a:hover {
 			color: #ffab00;
 			background: #1a1a1a;
 		}
 @media (min-width: 800px) {
-.primary-nav a.is-current-link, .primary-nav a:hover {
+.primary-nav a.is-current-link,.primary-nav a.is-active,.primary-nav a:hover {
 				background: none
 		}
 	}
@@ -6958,7 +6976,7 @@ Instead edit gulp/templates/sprite */
 .site-header__contact {
 		text-align: center;
 		display: block;
-		margin-top: 90px;
+		margin-top: 20px;
 	}
 @media (min-width: 800px) {
 .site-header__contact {

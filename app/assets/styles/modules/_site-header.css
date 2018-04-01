@@ -148,7 +148,7 @@
 	&__contact {
 		text-align: center;
 		display: block;
-		margin-top: 90px;
+		margin-top: 20px;
 
 		@mixin atMedium {
 			display: none;
