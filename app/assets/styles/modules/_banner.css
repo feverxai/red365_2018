@@ -13,6 +13,11 @@
         margin-top: 100px;
     }
 
+    @mixin atLarge {
+        height:515px;
+        padding-top: 0;
+    }
+
     &__inner {
         position: absolute;
         top: 5%;

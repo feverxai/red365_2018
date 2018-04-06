@@ -7007,6 +7007,12 @@ Instead edit gulp/templates/sprite */
         margin-top: 100px
 }
 	}
+@media (min-width: 1010px) {
+.banner {
+        height:515px;
+        padding-top: 0
+}
+	}
 .banner__inner {
         position: absolute;
         top: 5%;
