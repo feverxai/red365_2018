@@ -2,10 +2,12 @@ import $ from 'jquery';
 import owlCarousel from 'owl.carousel';
 import MobileMenu from './modules/MobileMenu';
 import StickyHeader from './modules/StickyHeader';
+import InstallationSwitcher from './modules/InstallationSwitcher';
 import Modal from './modules/Modal';
 
 var mobileMenu = new MobileMenu();
 var stickyHeader = new StickyHeader();
+var installationSwitcher = new InstallationSwitcher();
 var modal = new Modal();
 
 $('#banner-carousel').owlCarousel({

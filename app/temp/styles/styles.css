@@ -7236,3 +7236,21 @@ Instead edit gulp/templates/sprite */
 .owl-carousel.off {
     display: block;
 }
+.install__android {
+        display: none;
+        margin: 0 10px;
+    }
+.install__android--open {
+            display: block;
+            -webkit-animation: fadein 3s;
+                    animation: fadein 3s;
+        }
+.install__ios {
+        display: none;
+        margin: 0 10px;
+    }
+.install__ios--open {
+            display: block;
+            -webkit-animation: fadein 3s;
+                    animation: fadein 3s;
+        }

@@ -1,0 +1,21 @@
+.install {
+    &__android {
+        display: none;
+        margin: 0 10px;
+
+        &--open {
+            display: block;
+            animation: fadein 3s;
+        }
+    }
+
+    &__ios {
+        display: none;
+        margin: 0 10px;
+
+        &--open {
+            display: block;
+            animation: fadein 3s;
+        }
+    }
+}

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10445,6 +10445,68 @@ return jQuery;
 
 
 Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var InstallationSwitcher = function () {
+  function InstallationSwitcher() {
+    _classCallCheck(this, InstallationSwitcher);
+
+    this.android = (0, _jquery2.default)("#android_btn");
+    this.iOS = (0, _jquery2.default)("#iOS_btn");
+    this.events();
+  }
+
+  _createClass(InstallationSwitcher, [{
+    key: "events",
+    value: function events() {
+      // var that = this;
+      this.android.click(this.androidOpenClass);
+      this.iOS.click(this.iOSOpenClass);
+    }
+  }, {
+    key: "androidOpenClass",
+    value: function androidOpenClass() {
+      (0, _jquery2.default)("#ios_install").removeClass("install__ios--open");
+      (0, _jquery2.default)("#android_install").addClass("install__android--open");
+
+      (0, _jquery2.default)(this).siblings("button").removeClass("active");
+      (0, _jquery2.default)(this).addClass("active");
+    }
+  }, {
+    key: "iOSOpenClass",
+    value: function iOSOpenClass() {
+      (0, _jquery2.default)("#android_install").removeClass("install__android--open");
+      (0, _jquery2.default)("#ios_install").addClass("install__ios--open");
+
+      (0, _jquery2.default)(this).siblings("button").removeClass("active");
+      (0, _jquery2.default)(this).addClass("active");
+    }
+  }]);
+
+  return InstallationSwitcher;
+}();
+
+exports.default = InstallationSwitcher;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
@@ -10488,7 +10550,7 @@ var MobileMenu = function () {
 exports.default = MobileMenu;
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10556,7 +10618,7 @@ var Modal = function () {
 exports.default = Modal;
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10572,11 +10634,11 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _noframework = __webpack_require__(7);
+var _noframework = __webpack_require__(8);
 
 var _noframework2 = _interopRequireDefault(_noframework);
 
-var _jquerySmoothScroll = __webpack_require__(6);
+var _jquerySmoothScroll = __webpack_require__(7);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -10639,7 +10701,7 @@ var StickyHeader = function () {
 exports.default = StickyHeader;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, jQuery) {/**
@@ -14062,7 +14124,7 @@ exports.default = StickyHeader;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(0)))
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14072,19 +14134,23 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _owl = __webpack_require__(4);
+var _owl = __webpack_require__(5);
 
 var _owl2 = _interopRequireDefault(_owl);
 
-var _MobileMenu = __webpack_require__(1);
+var _MobileMenu = __webpack_require__(2);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
-var _StickyHeader = __webpack_require__(3);
+var _StickyHeader = __webpack_require__(4);
 
 var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
 
-var _Modal = __webpack_require__(2);
+var _InstallationSwitcher = __webpack_require__(1);
+
+var _InstallationSwitcher2 = _interopRequireDefault(_InstallationSwitcher);
+
+var _Modal = __webpack_require__(3);
 
 var _Modal2 = _interopRequireDefault(_Modal);
 
@@ -14092,6 +14158,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var mobileMenu = new _MobileMenu2.default();
 var stickyHeader = new _StickyHeader2.default();
+var installationSwitcher = new _InstallationSwitcher2.default();
 var modal = new _Modal2.default();
 
 (0, _jquery2.default)('#banner-carousel').owlCarousel({
@@ -14135,7 +14202,7 @@ if ((0, _jquery2.default)(window).width() > 767) {
 });
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -14502,7 +14569,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 /*!
