@@ -6329,9 +6329,7 @@ a {
 				background: none
 		}
 	}
-.primary-nav__login {
-		float: right;
-    }
+/* float: right; */
 @media (min-width: 800px) {
             .primary-nav__login li {
                 padding: 0 7.5px;
