@@ -84,7 +84,7 @@
 	}
     
     &__login {
-		float: right;
+		/* float: right; */
         @mixin atMedium {
             li {
                 padding: 0 7.5px;
