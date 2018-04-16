@@ -1,7 +1,6 @@
 .primary-nav {
 	height: 100vh;
 	background: #1a1a1a;
-	width: 80%;
 	position: relative;
 
 	@mixin atMedium {
@@ -85,6 +84,16 @@
     
     &__login {
 		/* float: right; */
+		li {
+			list-style: none;
+			display: inline;
+
+			a {
+				color: #FFF;
+				font-weight: 200;
+				text-decoration: none;
+			}
+		}
         @mixin atMedium {
             li {
                 padding: 0 7.5px;

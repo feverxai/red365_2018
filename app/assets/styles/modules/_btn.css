@@ -10,10 +10,15 @@
 	}
 
 	&--large {
-		padding: 1.1rem 1.9rem;
+		padding: 0.6rem 3.6rem;
 
 		@mixin atSmall {
 			font-size: 1.25rem;
 		}
+	}
+
+	&--grey {
+		background-color: #787878;
+		color: #b5b5b5;
 	}
 }

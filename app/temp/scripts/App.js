@@ -10527,6 +10527,8 @@ var MobileMenu = function () {
 		this.siteHeader = (0, _jquery2.default)(".site-header");
 		this.menuIcon = (0, _jquery2.default)(".site-header__menu-icon");
 		this.menuContent = (0, _jquery2.default)(".site-header__menu-content");
+		this.loginIcon = (0, _jquery2.default)(".site-header__login-mb");
+		this.loginContent = (0, _jquery2.default)(".site-header__login-content");
 		this.events();
 	}
 
@@ -10534,6 +10536,7 @@ var MobileMenu = function () {
 		key: "events",
 		value: function events() {
 			this.menuIcon.click(this.toggleTheMenu.bind(this));
+			this.loginIcon.click(this.toggleTheLogin.bind(this));
 		}
 	}, {
 		key: "toggleTheMenu",
@@ -10541,6 +10544,17 @@ var MobileMenu = function () {
 			this.menuContent.toggleClass("site-header__menu-content--is-visible");
 			this.siteHeader.toggleClass("site-header--is-expanded");
 			this.menuIcon.toggleClass("site-header__menu-icon--close-x");
+			this.loginContent.removeClass("site-header__login-content--is-visible");
+			this.loginIcon.removeClass("site-header__login-mb--active");
+		}
+	}, {
+		key: "toggleTheLogin",
+		value: function toggleTheLogin() {
+			this.loginContent.toggleClass("site-header__login-content--is-visible");
+			this.siteHeader.toggleClass("site-header--is-expanded");
+			this.loginIcon.toggleClass("site-header__login-mb--active");
+			this.menuIcon.removeClass("site-header__menu-icon--close-x");
+			this.menuContent.removeClass("site-header__menu-content--is-visible");
 		}
 	}]);
 
