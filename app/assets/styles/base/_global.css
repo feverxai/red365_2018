@@ -2,6 +2,16 @@ body {
 	font-family: 'SukhumvitSet', sans-serif;
 	background-color: #000;
 	color: #FFF;
+	background-image: url('../../assets/images/Herobanner.png');
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+	background-size: cover;
+	/* opacity: 0.5; */
+}
+
+button, input {
+	font-family: 'SukhumvitSet', sans-serif;
 }
 
 img {

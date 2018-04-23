@@ -1,12 +1,12 @@
 .banner {
-    background: url('../../assets/images/Herobanner.png') no-repeat;
+    /* background: url('../../assets/images/Herobanner.png') no-repeat;
     background-position: center top;
     background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
+    background-repeat: no-repeat; */
+    /* width: 100%;
     height: 0;
     padding-top: 41.67%;
-    position: relative;
+    position: relative; */
     margin-top: 70px;
 
     @mixin atMedium {
@@ -14,15 +14,15 @@
     }
 
     @mixin atLarge {
-        height:515px;
+        height: 380px;
         padding-top: 0;
     }
 
     &__inner {
-        position: absolute;
+        /* position: absolute;
         top: 5%;
         left: 5%;
         right: 19%;
-        background-color: rgba(0, 0, 0, 0.53);
+        background-color: rgba(0, 0, 0, 0.53); */
     }
 }

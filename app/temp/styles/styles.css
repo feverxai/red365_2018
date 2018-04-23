@@ -6173,6 +6173,15 @@ body {
 	font-family: 'SukhumvitSet', sans-serif;
 	background-color: #000;
 	color: #FFF;
+	background-image: url('../../assets/images/Herobanner.png');
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+	background-size: cover;
+	/* opacity: 0.5; */
+}
+button, input {
+	font-family: 'SukhumvitSet', sans-serif;
 }
 img {
 	max-width: 100%;
@@ -7049,14 +7058,14 @@ Instead edit gulp/templates/sprite */
 			/* transform: scale(1); */
 		}
 .banner {
-    background: url('../../assets/images/Herobanner.png') no-repeat;
+    /* background: url('../../assets/images/Herobanner.png') no-repeat;
     background-position: center top;
     background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
+    background-repeat: no-repeat; */
+    /* width: 100%;
     height: 0;
     padding-top: 41.67%;
-    position: relative;
+    position: relative; */
     margin-top: 70px;
 }
 @media (min-width: 800px) {
@@ -7066,33 +7075,30 @@ Instead edit gulp/templates/sprite */
 	}
 @media (min-width: 1010px) {
 .banner {
-        height:515px;
+        height: 380px;
         padding-top: 0
 }
 	}
 .banner__inner {
-        position: absolute;
+        /* position: absolute;
         top: 5%;
         left: 5%;
         right: 19%;
-        background-color: rgba(0, 0, 0, 0.53);
+        background-color: rgba(0, 0, 0, 0.53); */
     }
 .howto {
     display: block;
 }
 @media (min-width: 800px) {
 .howto {
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;
-        -webkit-box-pack:justify;
-            -ms-flex-pack:justify;
-                justify-content:space-between;
-        -webkit-box-align: stretch;
-            -ms-flex-align: stretch;
-                align-items: stretch;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap
+        /* display:flex;
+        justify-content:space-between;
+        align-items: stretch;
+        flex-wrap: wrap; */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%
 }
 	}
 .howto__register {
@@ -7104,7 +7110,10 @@ Instead edit gulp/templates/sprite */
 @media (min-width: 800px) {
 .howto__register {
             padding: 30px;
-            width: auto
+            /* width: 60%; */
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 60%;
+                    flex: 0 0 60%
     }
 	}
 .howto__register--inside {
@@ -7162,10 +7171,13 @@ Instead edit gulp/templates/sprite */
         padding: 20px;
         width: 100%;
     }
+/* height: 400px; */
 @media (min-width: 800px) {
 .howto__download {
             padding: 30px;
-            width: auto
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1
     }
 	}
 .howto__download-store {
@@ -7209,9 +7221,20 @@ Instead edit gulp/templates/sprite */
             margin-left:10px;
         }
 .promotion {
-    margin: 20px 0;
-    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
+.promotion-item {
+        width: 50%;
+        margin-right: 20px;
+    }
+.promotion-item:last-child {
+        margin-right: 0px;
+    }
 .circle-img-outer {
     border:2px solid #FFF;
     border-radius: 50%;

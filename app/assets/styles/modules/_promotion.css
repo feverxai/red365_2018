@@ -1,4 +1,13 @@
 .promotion {
-    margin: 20px 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+        width: 50%;
+        margin-right: 20px;
+    }
+
+    &-item:last-child {
+        margin-right: 0px;
+    }
 }

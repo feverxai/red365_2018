@@ -2,10 +2,12 @@
     display: block;
 
     @mixin atMedium {
-        display:flex;
+        /* display:flex;
         justify-content:space-between;
         align-items: stretch;
-        flex-wrap: wrap;
+        flex-wrap: wrap; */
+        display: flex;
+        width: 100%;
     }
 
     &__register {
@@ -15,7 +17,8 @@
 
         @mixin atMedium {
             padding: 30px;
-            width: auto;
+            /* width: 60%; */
+            flex: 0 0 60%;
         }
 
         &--inside {
@@ -74,10 +77,11 @@
         text-align: center;
         padding: 20px;
         width: 100%;
+        /* height: 400px; */
 
         @mixin atMedium {
             padding: 30px;
-            width: auto;
+            flex: 1;
         }
 
         &-store {
