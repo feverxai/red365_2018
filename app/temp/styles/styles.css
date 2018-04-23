@@ -7334,3 +7334,18 @@ Instead edit gulp/templates/sprite */
             -webkit-animation: fadein 3s;
                     animation: fadein 3s;
         }
+.input-form input, .input-form textarea, .input-form select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+    }
+@media (min-width: 800px) {
+.input-form input, .input-form textarea, .input-form select {
+            width: 50%;
+            margin: 5px
+    }
+	}
+.input-form button {
+        border:none;
+        cursor: pointer;
+    }

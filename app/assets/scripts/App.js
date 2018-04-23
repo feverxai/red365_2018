@@ -4,11 +4,13 @@ import MobileMenu from './modules/MobileMenu';
 import StickyHeader from './modules/StickyHeader';
 import InstallationSwitcher from './modules/InstallationSwitcher';
 import Modal from './modules/Modal';
+import RegisterValidate from './modules/RegisterValidate';
 
 var mobileMenu = new MobileMenu();
 var stickyHeader = new StickyHeader();
 var installationSwitcher = new InstallationSwitcher();
 var modal = new Modal();
+var registerValidate = new RegisterValidate();
 
 $('#banner-carousel').owlCarousel({
     animateOut: 'slideOutDown',
