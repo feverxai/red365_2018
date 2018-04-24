@@ -16,6 +16,14 @@ var registerValidate = new RegisterValidate();
 var formValidation = new FormValidation();
 var depWithSelector = new DepWithSelector();
 
+const flatpickr = require("flatpickr");
+
+flatpickr("#transaction_datetime", {
+    enableTime: true,
+    time_24hr: true,
+    defaultDate: "today"
+});
+
 $('#banner-carousel').owlCarousel({
     animateOut: 'slideOutDown',
     animateIn: 'flipInX',

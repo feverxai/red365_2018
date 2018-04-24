@@ -20,8 +20,8 @@ class DepWithSelector {
         this.formDep.show();
         this.formWith.hide();
 
-        this.dep.addClass("active");
-        this.with.removeClass("active");
+        this.dep.addClass("btn--active");
+        this.with.removeClass("btn--active");
 
         return false;
     }
@@ -31,8 +31,8 @@ class DepWithSelector {
         this.formDep.hide();
         this.formWith.show();
 
-        this.dep.removeClass("active");
-        this.with.addClass("active");
+        this.dep.removeClass("btn--active");
+        this.with.addClass("btn--active");
         
         return false;
 	}

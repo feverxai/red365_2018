@@ -1,8 +1,12 @@
 .game {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     align-items: center;
     padding: 0 50px;
+
+    @mixin atMedium {
+        display: flex;
+    }
 
     &__item {
         width: 31%;
@@ -15,5 +19,16 @@
         @mixin atSmall {
             width: 15%;
         }
+        &--mb {
+            display: none;
+
+            @mixin atMedium {
+                display: block;
+            }
+        }
+    }
+
+    &--mb {
+        display: flex;
     }
 }

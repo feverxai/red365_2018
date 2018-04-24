@@ -11,7 +11,7 @@ class FormValidation {
 
 	initialize() {
         var getUrl = window.location;
-        var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+		var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
 		
         this.depForm.validate({
 			rules: {
@@ -45,7 +45,7 @@ class FormValidation {
 				$(".submit").attr("disabled", true);
 				$(form).ajaxSubmit({
 					type: "POST",
-					url: baseUrl+"front/deposit",
+					url: "/front/deposit",
 					success: function(msg) {
 						var res = JSON.parse(msg);
 						if (res.status == 'OK') {
@@ -99,7 +99,7 @@ class FormValidation {
 				$(".submit").attr("disabled", true);
 				$(form).ajaxSubmit({
 					type: "POST",
-					url: baseUrl+"front/withdraw",
+					url: "/front/withdraw",
 					success: function(msg) {
 						var res = JSON.parse(msg);
 						if (res.status == 'OK') {

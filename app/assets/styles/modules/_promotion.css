@@ -1,10 +1,19 @@
 .promotion {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @mixin atMedium {
+        flex-wrap: nowrap;
+    }
 
     &-item {
-        width: 50%;
-        margin-right: 20px;
+        width: 100%;
+
+        @mixin atMedium {
+            width: 50%;
+            margin-right: 20px;
+        }
     }
 
     &-item:last-child {
