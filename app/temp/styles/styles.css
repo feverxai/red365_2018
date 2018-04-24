@@ -8015,7 +8015,7 @@ Instead edit gulp/templates/sprite */
 }
 	}
 .game__item {
-        width: 31%;
+        /* width: 31%; */
         text-align: center;
         margin: 20px;
     }
@@ -8024,7 +8024,7 @@ Instead edit gulp/templates/sprite */
         }
 @media (min-width: 530px) {
 .game__item {
-            width: 15%
+            /* width: 15%; */
     }
 	}
 .game__item--mb {
