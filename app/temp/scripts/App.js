@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10458,6 +10458,235 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var DepWithSelector = function () {
+  function DepWithSelector() {
+    _classCallCheck(this, DepWithSelector);
+
+    this.dep = (0, _jquery2.default)("#depost_btn");
+    this.with = (0, _jquery2.default)("#withdraw_btn");
+    this.formDep = (0, _jquery2.default)("#deposit-form");
+    this.formWith = (0, _jquery2.default)("#withdraw-form");
+    this.events();
+  }
+
+  _createClass(DepWithSelector, [{
+    key: "events",
+    value: function events() {
+      // var that = this;
+      this.dep.click(this.toggleDepOpenClass.bind(this));
+      this.with.click(this.toggleWithOpenClass.bind(this));
+    }
+  }, {
+    key: "toggleDepOpenClass",
+    value: function toggleDepOpenClass() {
+
+      this.formDep.show();
+      this.formWith.hide();
+
+      this.dep.addClass("active");
+      this.with.removeClass("active");
+
+      return false;
+    }
+  }, {
+    key: "toggleWithOpenClass",
+    value: function toggleWithOpenClass() {
+
+      this.formDep.hide();
+      this.formWith.show();
+
+      this.dep.removeClass("active");
+      this.with.addClass("active");
+
+      return false;
+    }
+  }]);
+
+  return DepWithSelector;
+}();
+
+exports.default = DepWithSelector;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _jqueryValidation = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"jquery-validation\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+var _jqueryValidation2 = _interopRequireDefault(_jqueryValidation);
+
+var _jqueryForm = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"jquery-form\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+var _jqueryForm2 = _interopRequireDefault(_jqueryForm);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var FormValidation = function () {
+	function FormValidation() {
+		_classCallCheck(this, FormValidation);
+
+		this.depForm = (0, _jquery2.default)("#deposit-form");
+		this.withForm = (0, _jquery2.default)("#withdraw-form");
+		this.initialize();
+	}
+
+	_createClass(FormValidation, [{
+		key: 'initialize',
+		value: function initialize() {
+			var getUrl = window.location;
+			var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+
+			this.depForm.validate({
+				rules: {
+					transaction_datetime: {
+						required: true
+					},
+					transaction_slip: {
+						required: true
+					},
+					transaction_amount: {
+						required: true,
+						number: true
+					}
+				},
+				messages: {
+					transaction_datetime: {
+						required: "Please enter your datetime!"
+					},
+					transaction_slip: {
+						required: "Please upload slip!"
+					},
+					transaction_amount: {
+						required: "Please enter your amount!",
+						email: "Please enter a valid amount"
+					}
+				},
+
+				// SUBMIT //
+				submitHandler: function submitHandler(form) {
+					var result;
+					(0, _jquery2.default)(".submit").attr("disabled", true);
+					(0, _jquery2.default)(form).ajaxSubmit({
+						type: "POST",
+						url: baseUrl + "front/deposit",
+						success: function success(msg) {
+							var res = JSON.parse(msg);
+							if (res.status == 'OK') {
+								result = res.text;
+								(0, _jquery2.default)('#transaction_datetime').val('');
+								(0, _jquery2.default)('#transaction_slip').val('');
+								(0, _jquery2.default)('#transaction_amount').val('');
+							} else {
+								result = res.text;
+							}
+
+							(0, _jquery2.default)("#alert-area3").html(result);
+							(0, _jquery2.default)(".submit").attr("disabled", false);
+						},
+						error: function error() {
+
+							result = '<div class="alert alert--red">There was an error sending the transaction!</div>';
+							(0, _jquery2.default)("#alert-area3").html(result);
+							(0, _jquery2.default)(".submit").attr("disabled", false);
+						}
+					});
+				}
+			});
+
+			this.withForm.validate({
+				rules: {
+					transaction_security_code: {
+						required: true,
+						number: true
+					},
+					transaction_amount: {
+						required: true,
+						number: true
+					}
+				},
+				messages: {
+					transaction_security_code: {
+						required: "Please enter your Security Code!"
+					},
+					transaction_amount: {
+						required: "Please enter your amount!",
+						email: "Please enter a valid amount"
+					}
+				},
+
+				// SUBMIT //
+				submitHandler: function submitHandler(form) {
+					var result;
+					(0, _jquery2.default)(".submit").attr("disabled", true);
+					(0, _jquery2.default)(form).ajaxSubmit({
+						type: "POST",
+						url: baseUrl + "front/withdraw",
+						success: function success(msg) {
+							var res = JSON.parse(msg);
+							if (res.status == 'OK') {
+								result = res.text;
+								(0, _jquery2.default)('#transaction_security_code').val('');
+								(0, _jquery2.default)('.transaction_amount').val('');
+							} else {
+								result = res.text;
+							}
+
+							(0, _jquery2.default)("#alert-area4").html(result);
+							(0, _jquery2.default)(".submit").attr("disabled", false);
+						},
+						error: function error() {
+
+							result = '<div class="alert alert--red">There was an error sending the request!</div>';
+							(0, _jquery2.default)("#alert-area4").html(result);
+							(0, _jquery2.default)(".submit").attr("disabled", false);
+						}
+					});
+				}
+			});
+		}
+	}]);
+
+	return FormValidation;
+}();
+
+exports.default = FormValidation;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 var InstallationSwitcher = function () {
   function InstallationSwitcher() {
     _classCallCheck(this, InstallationSwitcher);
@@ -10500,7 +10729,7 @@ var InstallationSwitcher = function () {
 exports.default = InstallationSwitcher;
 
 /***/ }),
-/* 2 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10564,7 +10793,7 @@ var MobileMenu = function () {
 exports.default = MobileMenu;
 
 /***/ }),
-/* 3 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10632,7 +10861,7 @@ var Modal = function () {
 exports.default = Modal;
 
 /***/ }),
-/* 4 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10697,7 +10926,7 @@ var RegisterValidate = function () {
 exports.default = RegisterValidate;
 
 /***/ }),
-/* 5 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10713,11 +10942,11 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _noframework = __webpack_require__(9);
+var _noframework = __webpack_require__(11);
 
 var _noframework2 = _interopRequireDefault(_noframework);
 
-var _jquerySmoothScroll = __webpack_require__(8);
+var _jquerySmoothScroll = __webpack_require__(10);
 
 var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
 
@@ -10780,7 +11009,7 @@ var StickyHeader = function () {
 exports.default = StickyHeader;
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, jQuery) {/**
@@ -14203,7 +14432,7 @@ exports.default = StickyHeader;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(0)))
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14213,29 +14442,37 @@ var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _owl = __webpack_require__(6);
+var _owl = __webpack_require__(8);
 
 var _owl2 = _interopRequireDefault(_owl);
 
-var _MobileMenu = __webpack_require__(2);
+var _MobileMenu = __webpack_require__(4);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
-var _StickyHeader = __webpack_require__(5);
+var _StickyHeader = __webpack_require__(7);
 
 var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
 
-var _InstallationSwitcher = __webpack_require__(1);
+var _InstallationSwitcher = __webpack_require__(3);
 
 var _InstallationSwitcher2 = _interopRequireDefault(_InstallationSwitcher);
 
-var _Modal = __webpack_require__(3);
+var _Modal = __webpack_require__(5);
 
 var _Modal2 = _interopRequireDefault(_Modal);
 
-var _RegisterValidate = __webpack_require__(4);
+var _RegisterValidate = __webpack_require__(6);
 
 var _RegisterValidate2 = _interopRequireDefault(_RegisterValidate);
+
+var _FormValidation = __webpack_require__(2);
+
+var _FormValidation2 = _interopRequireDefault(_FormValidation);
+
+var _DepWithSelector = __webpack_require__(1);
+
+var _DepWithSelector2 = _interopRequireDefault(_DepWithSelector);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -14244,6 +14481,8 @@ var stickyHeader = new _StickyHeader2.default();
 var installationSwitcher = new _InstallationSwitcher2.default();
 var modal = new _Modal2.default();
 var registerValidate = new _RegisterValidate2.default();
+var formValidation = new _FormValidation2.default();
+var depWithSelector = new _DepWithSelector2.default();
 
 (0, _jquery2.default)('#banner-carousel').owlCarousel({
     animateOut: 'slideOutDown',
@@ -14286,7 +14525,7 @@ if ((0, _jquery2.default)(window).width() > 767) {
 });
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -14653,7 +14892,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports) {
 
 /*!

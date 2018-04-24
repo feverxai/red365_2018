@@ -5,12 +5,16 @@ import StickyHeader from './modules/StickyHeader';
 import InstallationSwitcher from './modules/InstallationSwitcher';
 import Modal from './modules/Modal';
 import RegisterValidate from './modules/RegisterValidate';
+import FormValidation from './modules/FormValidation';
+import DepWithSelector from './modules/DepWithSelector';
 
 var mobileMenu = new MobileMenu();
 var stickyHeader = new StickyHeader();
 var installationSwitcher = new InstallationSwitcher();
 var modal = new Modal();
 var registerValidate = new RegisterValidate();
+var formValidation = new FormValidation();
+var depWithSelector = new DepWithSelector();
 
 $('#banner-carousel').owlCarousel({
     animateOut: 'slideOutDown',
